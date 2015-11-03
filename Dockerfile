@@ -27,7 +27,7 @@ RUN \
 WORKDIR /opt
 RUN \
   curl -s -o grafana.tar.gz "https://grafanarel.s3.amazonaws.com/builds/grafana-latest.linux-x64.tar.gz" && \
-  curl -s -o influxdb_latest_amd64.deb http://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb && \
+  curl -s -o influxdb_latest_amd64.deb https://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb && \
   mkdir grafana && \
   tar -xzf grafana.tar.gz --directory grafana --strip-components=1 && \
   dpkg -i influxdb_latest_amd64.deb && \
